@@ -10,15 +10,16 @@
   "author": "STih07",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/STih07/thrift-compiler/issues"
+    "url": "https://github.com/STih07/ng-thrift-caller/issues"
   },
   "dependencies": {
     "@types/thrift": "^0.10.7"
   },
-  "homepage": "https://github.com/STih07/thrift-compiler#readme",
-  "devDependencies": {},
+  "homepage": "https://github.com/STih07/ng-thrift-caller#readme",
+  "devDependencies": {
+  },
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Sorry not today\""
   },
   "keywords": [
     "thrift",
