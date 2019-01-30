@@ -1,0 +1,27 @@
+{
+  "name": "ng-thrift-caller",
+  "version": "0.0.1",
+  "description": "Thrift caller for angular",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/STih07/thrift-caller.git"
+  },
+  "author": "STih07",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/STih07/thrift-compiler/issues"
+  },
+  "dependencies": {
+    "@types/thrift": "^0.10.7"
+  },
+  "homepage": "https://github.com/STih07/thrift-compiler#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "thrift",
+    "angular"
+  ]
+}
