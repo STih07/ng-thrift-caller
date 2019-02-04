@@ -1,10 +1,5 @@
 import { TClientConstructor, TProtocolConstructor, TTransportConstructor, ConnectOptions } from 'thrift';
-
-export interface UrlOptions {
-  host: string;
-  port: number;
-  https: boolean;
-}
+import { UrlOptions } from './index';
 
 type createConnection = (host: string, port: number, options?: ConnectOptions) => any;
 type createClient = (client, connection) => any;
@@ -50,11 +45,3 @@ export class ClientFactory {
     return this.createClient(service, connection);
   };
 }
-
-
-
-import { TBinaryProtocol } from 'thrift';
-import { TBufferedTransport } from 'thrift';
-
-export const ThriftMaker = new ThriftCompiler(TBufferedTransport, TBinaryProtocol, {host: '127.0.0.1', port: 92, https: false});
-
