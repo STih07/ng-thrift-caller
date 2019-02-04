@@ -1,6 +1,6 @@
 import { TClientConstructor, TProtocolConstructor, TTransportConstructor, ConnectOptions } from 'thrift';
 
-interface UrlOptions {
+export interface UrlOptions {
   host: string;
   port: number;
   https: boolean;
@@ -9,7 +9,7 @@ interface UrlOptions {
 type createConnection = (host: string, port: number, options?: ConnectOptions) => any;
 type createClient = (client, connection) => any;
 
-class ThriftCompiler {
+export class ThriftCompiler {
   transport: TTransportConstructor;
   protocol: TProtocolConstructor;
   url: UrlOptions;
@@ -25,7 +25,7 @@ class ThriftCompiler {
 }
 
 
-class ClientFactory {
+export class ClientFactory {
   transport: TTransportConstructor;
   protocol: TProtocolConstructor;
   url: UrlOptions;

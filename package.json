@@ -13,11 +13,12 @@
     "url": "https://github.com/STih07/ng-thrift-caller/issues"
   },
   "dependencies": {
-    "@types/thrift": "^0.10.7"
+    "@angular/core": "^7.2.3",
+    "@types/thrift": "^0.10.7",
+    "rxjs": "^6.4.0"
   },
   "homepage": "https://github.com/STih07/ng-thrift-caller#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Sorry not today\""
   },

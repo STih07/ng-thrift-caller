@@ -13,20 +13,33 @@ add to **package.json** as *dependency*
 ```typescript
 import { ThriftService } from 'ng-thrift-caller';
 import { ThriftFactory, ThriftFactoryOptions } from 'ng-thrift-caller';
-import { UserService, ProjectService, YourService } from 'path-to-your-thrift';
+import { UserService, ProjectService } from 'path-to-your-thrift';
 ```
 ```typescript
-const config: ThriftFactoryConfig = {
-    transport: TBufferedTransport,
-    protocol: TJSONProtocol,
-    url: {host: '127.0.0.1', port: 92, https: false}
-}
-const services: ThriftFactoryServices = {
-    USER: {client: UserService, path: '/user'}, //your thrift services
-    PROJECT: {client: ProjectService, path: '/project'},
-    SERVICE: {client: YourService, path: '/yours'}
- }
-const MyConfig: ThriftFactoryOptions = ThriftFactory.getInstance(config, services)
+export function MyConfig() {
+
+  let url: UrlOptions = {host: '127.0.0.1', port: 92, https: false};
+
+  let factory = new ClientFactory(TBufferedTransport, TBinaryProtocol, createXHRConnection, createXHRClient, url);
+
+  let callback = (err, res) => {
+    if (err) {
+      if(err.code == 2) {
+        console.warn('YOUR TOKEN WAS DEPRECATED!');
+      }
+      console.error(err);
+    } else if (res) {
+      console.log(res);
+    }
+  };
+
+  let clients = {
+    'USER': factory.getClient(UserService, '/user'),
+    'PROJECT': factory.getClient(ProjectService, '/project')
+  };
+
+  return new ThriftService(factory, clients, callback);
+};
 ```
 ```typescript
 @NgModule({
