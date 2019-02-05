@@ -1,8 +1,6 @@
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ClientFactory, UrlOptions } from './thrift-compiler';
-
-
+import { ClientFactory } from './thrift-compiler';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ThriftService {

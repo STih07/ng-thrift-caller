@@ -14,12 +14,16 @@
   },
   "dependencies": {
     "@angular/core": "^7.2.3",
+    "@types/core-js": "^2.5.0",
     "@types/thrift": "^0.10.7",
     "rxjs": "^6.4.0"
   },
   "homepage": "https://github.com/STih07/ng-thrift-caller#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "typescript": "^3.3.1"
+  },
   "scripts": {
+    "prepublish": "tsc",
     "test": "echo \"Sorry not today\""
   },
   "keywords": [

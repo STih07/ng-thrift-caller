@@ -1,8 +1,14 @@
 import { TClientConstructor, TProtocolConstructor, TTransportConstructor, ConnectOptions } from 'thrift';
-import { UrlOptions } from './index';
 
 type createConnection = (host: string, port: number, options?: ConnectOptions) => any;
 type createClient = (client, connection) => any;
+
+
+interface UrlOptions {
+    host: string;
+    port: number;
+    https: boolean;
+}
 
 export class ThriftCompiler {
   transport: TTransportConstructor;
