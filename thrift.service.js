@@ -20,17 +20,21 @@ var ThriftService = /** @class */ (function () {
     }
     ThriftService.prototype.call = function (client, method, data) {
         var _this = this;
+        var rest = [];
+        for (var _i = 3; _i < arguments.length; _i++) {
+            rest[_i - 3] = arguments[_i];
+        }
         return new rxjs_1.Observable(function (observer) {
-            client[method](data, function (err, res) {
-                _this.callback && _this.callback(err, res);
-                if (err) {
-                    observer.error(err);
-                }
-                else if (res) {
-                    observer.next(res);
-                }
-                return { unsubscribe: function () { } };
-            });
+            client[method].apply(client, [data].concat(rest, [function (err, res) {
+                    _this.callback && _this.callback(err, res);
+                    if (err) {
+                        observer.error(err);
+                    }
+                    else if (res) {
+                        observer.next(res);
+                    }
+                    return { unsubscribe: function () { } };
+                }]));
         });
     };
     ThriftService = __decorate([

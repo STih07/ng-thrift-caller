@@ -5,5 +5,5 @@ export declare class ThriftService {
     private factory;
     private callback;
     constructor(factory: ClientFactory, clients: any, callback?: (err: any, res: any) => void);
-    call(client: any, method: string, data: Object): Observable<any>;
+    call(client: any, method: string, data: Object, ...rest: any[]): Observable<any>;
 }
