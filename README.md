@@ -12,7 +12,7 @@ add to **package.json** as *dependency*
 1. Provide service in your **app.module.ts**
 ```typescript
 import { ThriftService } from 'ng-thrift-caller';
-import { ThriftFactory, ThriftFactoryOptions } from 'ng-thrift-caller';
+import { ClientFactory, UrlOptions } from 'ng-thrift-caller';
 import { UserService, ProjectService } from 'path-to-your-thrift';
 ```
 ```typescript
