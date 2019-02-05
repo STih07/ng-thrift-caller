@@ -1,7 +1,7 @@
 import { TClientConstructor, TProtocolConstructor, TTransportConstructor, ConnectOptions } from 'thrift';
-declare type createConnection = (host: string, port: number, options?: ConnectOptions) => any;
-declare type createClient = (client: any, connection: any) => any;
-interface UrlOptions {
+export declare type createConnection = (host: string, port: number, options?: ConnectOptions) => any;
+export declare type createClient = (client: any, connection: any) => any;
+export interface UrlOptions {
     host: string;
     port: number;
     https: boolean;
@@ -22,4 +22,3 @@ export declare class ClientFactory {
     constructor(transport: TTransportConstructor, protocol: TProtocolConstructor, connectionType: createConnection, clientType: createClient, url: UrlOptions);
     getClient<TClient>(service: TClientConstructor<TClient>, path: string): TClient;
 }
-export {};

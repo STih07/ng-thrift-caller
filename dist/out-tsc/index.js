@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var thrift = require("./thrift.service");
-var compiler = require("./thrift-compiler");
-exports.ThriftService = thrift.ThriftService;
-exports.ClientFactory = compiler.ClientFactory;
+var thrift_service_1 = require("./thrift.service");
+exports.ThriftService = thrift_service_1.ThriftService;
+var thrift_compiler_1 = require("./thrift-compiler");
+exports.ThriftCompiler = thrift_compiler_1.ThriftCompiler;
+exports.ClientFactory = thrift_compiler_1.ClientFactory;
 //# sourceMappingURL=index.js.map

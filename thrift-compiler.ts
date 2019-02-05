@@ -1,10 +1,10 @@
 import { TClientConstructor, TProtocolConstructor, TTransportConstructor, ConnectOptions } from 'thrift';
 
-type createConnection = (host: string, port: number, options?: ConnectOptions) => any;
-type createClient = (client, connection) => any;
+export type createConnection = (host: string, port: number, options?: ConnectOptions) => any;
+export type createClient = (client, connection) => any;
 
 
-interface UrlOptions {
+export interface UrlOptions {
     host: string;
     port: number;
     https: boolean;

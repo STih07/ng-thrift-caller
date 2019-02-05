@@ -1,4 +1,2 @@
-import * as thrift from './thrift.service';
-import * as compiler from './thrift-compiler';
-export declare const ThriftService: typeof thrift.ThriftService;
-export declare const ClientFactory: typeof compiler.ClientFactory;
+export { ThriftService } from './thrift.service';
+export { createConnection, createClient, UrlOptions, ThriftCompiler, ClientFactory } from './thrift-compiler';
