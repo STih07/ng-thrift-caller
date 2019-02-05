@@ -1,10 +1,11 @@
 # ng-thrift-caller
 Page on  [GitHub](https://github.com/STih07/ng-thrift-caller)
+[NPM](https://www.npmjs.com/package/ng-thrift-caller)
 
 #### Installation
-add to **package.json** as *dependency*
+Install via **npm**
 ```
-"ng-thrift-caller": "git+https://github.com/STih07/ng-thrift-caller.git"
+npm i -S ng-thrift-caller
 ```
 
 #### Configure
