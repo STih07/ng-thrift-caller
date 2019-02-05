@@ -13,14 +13,14 @@
     "url": "https://github.com/STih07/ng-thrift-caller/issues"
   },
   "dependencies": {
-    "@angular/core": "^7.1.0",
-    "@types/core-js": "^2.5.0",
-    "@types/thrift": "^0.10.7",
-    "rxjs": "^6.4.0"
+    "@types/thrift": "^0.10.7"
   },
   "homepage": "https://github.com/STih07/ng-thrift-caller#readme",
   "devDependencies": {
-    "typescript": "^3.3.1"
+    "typescript": "^3.3.1",
+    "@angular/core": "^7.2.3",
+    "rxjs": "^6.4.0",
+    "@types/core-js": "^2.5.0"
   },
   "scripts": {
     "prepublish": "tsc",
