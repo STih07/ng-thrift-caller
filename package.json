@@ -1,11 +1,11 @@
 {
   "name": "ng-thrift-caller",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Thrift caller for angular",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/STih07/thrift-caller.git"
+    "url": "git+https://github.com/STih07/ng-thrift-caller.git"
   },
   "author": "STih07",
   "license": "ISC",
