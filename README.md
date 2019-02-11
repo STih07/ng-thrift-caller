@@ -33,13 +33,17 @@ export function MyConfig() {
       console.log(res);
     }
   };
+  
+  let prerequest = () => {
+    console.log('One more request started!');
+  }
 
   let clients = {
     'USER': factory.getClient(UserService, '/user'),
     'PROJECT': factory.getClient(ProjectService, '/project')
   };
 
-  return new ThriftService(factory, clients, callback);
+  return new ThriftService(factory, clients, callback, prerequest);
 };
 ```
 ```typescript
