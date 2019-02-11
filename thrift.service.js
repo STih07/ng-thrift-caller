@@ -13,10 +13,11 @@ var rxjs_1 = require("rxjs");
 var thrift_compiler_1 = require("./thrift-compiler");
 var core_1 = require("@angular/core");
 var ThriftService = /** @class */ (function () {
-    function ThriftService(factory, clients, callback) {
+    function ThriftService(factory, clients, callback, before_request) {
         this.clients = clients;
         this.factory = factory;
         this.callback = callback;
+        this.before_request = before_request;
     }
     ThriftService.prototype.call = function (client, method, data) {
         var _this = this;
@@ -25,6 +26,7 @@ var ThriftService = /** @class */ (function () {
             rest[_i - 3] = arguments[_i];
         }
         return new rxjs_1.Observable(function (observer) {
+            _this.before_request && _this.before_request(_this);
             client[method].apply(client, [data].concat(rest, [function (err, res) {
                     _this.callback && _this.callback(err, res);
                     if (err) {
@@ -39,7 +41,7 @@ var ThriftService = /** @class */ (function () {
     };
     ThriftService = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [thrift_compiler_1.ClientFactory, Object, Function])
+        __metadata("design:paramtypes", [thrift_compiler_1.ClientFactory, Object, Function, Function])
     ], ThriftService);
     return ThriftService;
 }());
