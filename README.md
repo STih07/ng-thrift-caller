@@ -64,7 +64,7 @@ import { ThriftService } from 'ng-thrift-caller';
 @Component()
 export class YourComponent {
     constructor(private thrift: ThriftService) {
-        this.thrift.call(this.thrift.USER, 'login', {...})
+        this.thrift.call(this.thrift.clients.USER, 'login', {...})
             .subscribe(...)
     }
 }
