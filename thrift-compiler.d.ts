@@ -19,6 +19,6 @@ export declare class ClientFactory {
     url: UrlOptions;
     createConnection: createConnection;
     createClient: createClient;
-    constructor(transport: TTransportConstructor, protocol: TProtocolConstructor, connectionType: createConnection, clientType: createClient, url: UrlOptions);
+    constructor(transport: TTransportConstructor, protocol: TProtocolConstructor, connectionType: createConnection, clientType: createClient, url: UrlOptions | string);
     getClient<TClient>(service: TClientConstructor<TClient>, path: string): TClient;
 }
