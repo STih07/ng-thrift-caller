@@ -20,6 +20,11 @@ import { UserService, ProjectService } from 'path-to-your-thrift';
 export function MyConfig() {
 
   let url: UrlOptions = {host: '127.0.0.1', port: 92, https: false};
+  /* OR 
+  * let url = 'https://127.0.0.1:92',
+  * also url = '127.0.0.1' will be parsed with https: true and port 80
+  */
+  
 
   let factory = new ClientFactory(TBufferedTransport, TBinaryProtocol, createXHRConnection, createXHRClient, url);
 

@@ -10,7 +10,7 @@ export declare class ThriftCompiler {
     transport: TTransportConstructor;
     protocol: TProtocolConstructor;
     url: UrlOptions;
-    constructor(transport: TTransportConstructor, protocol: TProtocolConstructor, url: UrlOptions);
+    constructor(transport: TTransportConstructor, protocol: TProtocolConstructor, url: UrlOptions | string);
     getFactory(connectionType: createConnection, clientType: createClient): ClientFactory;
 }
 export declare class ClientFactory {

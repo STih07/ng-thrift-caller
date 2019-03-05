@@ -2,6 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var ThriftCompiler = /** @class */ (function () {
     function ThriftCompiler(transport, protocol, url) {
+        if (typeof url === 'string') {
+            var parse_http = url.split('://');
+            var has_http = parse_http.length > 1;
+            url = {
+                host: has_http ? parse_http[1].split(':')[0] : url.split(':')[0],
+                https: has_http ? parse_http[0] === 'https' : true,
+                port: (has_http ? +parse_http[1].split(':')[1] : +url.split(':')[1]) || 80
+            };
+        }
         this.transport = transport;
         this.protocol = protocol;
         this.url = url;
