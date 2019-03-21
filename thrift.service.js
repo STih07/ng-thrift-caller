@@ -35,6 +35,7 @@ var ThriftService = /** @class */ (function () {
                     else if (res) {
                         observer.next(res);
                     }
+                    observer.complete();
                     return { unsubscribe: function () { } };
                 }]));
         });
