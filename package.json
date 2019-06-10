@@ -1,6 +1,6 @@
 {
   "name": "ng-thrift-caller",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Thrift caller for angular",
   "main": "index.js",
   "repository": {
@@ -13,8 +13,8 @@
     "url": "https://github.com/STih07/ng-thrift-caller/issues"
   },
   "peerDependencies": {
-    "@angular/core": "^7.2.3",
-    "rxjs": "^6.4.0",
+    "@angular/core": "^7.1.0",
+    "rxjs": "^6.3.3",
     "@types/thrift": "^0.10.7"
   },
   "dependencies": {
