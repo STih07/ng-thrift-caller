@@ -19,6 +19,9 @@ var ThriftService = /** @class */ (function () {
         this.callback = callback;
         this.before_request = before_request;
     }
+    ThriftService.prototype.setCallback = function (callback) {
+        this.callback = callback;
+    };
     ThriftService.prototype.call = function (client, method, data) {
         var _this = this;
         var rest = [];
